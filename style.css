@@ -1,0 +1,594 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #F5F2D4;
+    color: #3C2F1C;
+	padding: 0;
+	margin: 0;
+}
+
+@font-face {
+    font-family: my_font;
+    src: url(EpilepsySansBold.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: my_font;
+    font-size: 130px;
+} 
+
+h2, h3 {
+    font-family: my_font;
+}
+
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+    font-size: 35px;
+    line-height: 140%;
+    letter-spacing: 5%;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.header .container, .header_top, .logo, .about .container, .footer_content{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* КОД ДЛЯ ПЕРВОГО ЭКРАНА */
+
+.header_top {
+    margin: 0 150px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 53px;
+    padding: 50px 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #3C2F1C;
+}
+
+.logo {
+  font-family: my_font;
+  width: max-content;
+}
+
+.logo img{
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+}
+
+.header {
+    position: relative;
+  }
+
+.header_content {
+    position: relative;
+    z-index: 2;
+}
+
+.header_content p {
+   max-width: 400px;
+}
+
+.header_img {
+    position: absolute;
+    right: -10px;
+    top: 85px;
+    z-index: 1;
+    max-width: 716px;
+    width: 100%;
+    height: auto;
+}
+
+.header_img img{
+    width: 100%;
+    height: auto;
+}
+
+.header .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.button, .review_form button {
+  background-color: #FF9900;
+  font-family: my_font;
+  border: none;
+  max-width: 300px;
+  width: 100%;
+  padding: 0.5em 0;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1em; 
+}
+
+.header .button {
+    display: inline-block;
+    max-width: 400px;
+    width: 100%;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    align-self: center;
+    transition: all 0.5s ease 0s;
+}
+
+.header .button:hover {
+    cursor: pointer;
+    text-transform: uppercase;
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animate__animated .animate__swing{
+    --animate-delay: 0.9s;
+}
+
+/* КОД О НАС*/
+
+.about {
+    position: relative;
+    padding-top: 120px;
+  }
+
+  .about .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+  .about p {
+    max-width: 520px; 
+    margin-top: 120px;
+    margin-bottom: 190px;
+    animation-duration: 3s;
+    animation-name: from_left;
+  }
+
+  .about img {
+    max-width: 460px;
+    width: 100%;
+    height: auto;
+    margin-top: 200px;
+    animation-duration: 3s;
+    animation-name: from_right;
+  }
+
+  /* КОД О ЯЙЦАХ*/
+
+.eggs_content {
+    display: flex;
+    
+}
+
+.eggs_image {
+    flex-shrink: 0;
+    margin-top: 120px;
+    
+}
+
+.eggs_image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.eggs_title_wrapper {
+    width: 100%;       
+    text-align: right; 
+    margin-bottom: 120px;
+}
+
+
+.eggs ol {
+    padding-left: 0;
+    list-style: none;
+    max-width: 540px;
+
+}
+
+.eggs li {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 70px;
+    
+}
+
+.eggs li.offset {
+    padding-left: 100px; 
+}
+
+.eggs li .number {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    font-family: 'my_font';
+    font-size: 60px;
+}
+
+.eggs li.offset .number {
+    left: 30px;
+
+}
+
+/* ЦЕНЫ */
+.pricing_grid {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    gap: 0.7em;
+    flex-wrap: wrap;
+}
+
+.price_card {
+    font-family: my_font;
+    border: 4px solid #FFA233;
+    padding: 1em;
+    width: 300px;
+    text-align: center;
+}
+
+/* ОТЗЫВЫ*/
+
+.reviews {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.swiper {
+
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.review-card {
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  color: #3C2F1C;
+  box-shadow: 0 4px 20px #3C2F1C;
+  margin-bottom: 120px;
+  margin-top: 50px;
+  margin-left: 15px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-prev {
+    margin-left: 10px;
+}
+
+.swiper-button-next {
+    margin-right: 10px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #FF9900 ; 
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 120px;
+  width: 100%;
+  text-align: center;
+  pointer-events: auto;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FF9900 !important;
+}
+
+.review-name{
+  font-weight: bold;
+  font-size: 35px; 
+  margin-bottom: 20px;
+}
+
+/* ВНИЗУ ВСЕ ОТНОСИТСЯ К ФОРМАМ*/
+
+input:valid, textarea:valid, select:valid {
+    background-color: #F5F2D4;
+    padding: 0.5em;
+    border: 2px solid #3C2F1C;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: palegreen;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #3C2F1C;
+}
+
+input:invalid:required, textarea:invalid:required, select:invalid:required {
+    background-color: #F5F2D4;
+    padding: 0.5em;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 1px 10px red;
+}
+
+option{
+    font-size: 16px;
+}
+
+input:focus:invalid, textarea:focus:invalid, select:focus:invalid {
+    box-shadow: none;
+}
+
+.review_form {
+    text-align: center;
+}
+
+.review_form .container {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 4px solid #FFA233;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.review_form form {
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.review_form button {
+    width: 100%;
+    align-self: center;
+    transition: all 0.5s ease 0s;
+}
+
+.review_form button:hover {
+    cursor: pointer;
+    text-transform: uppercase;
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ФУТЕР */
+.footer {
+  background-color: #3c2f1c;
+  color: #F5F2D4;
+  padding: 10px auto;
+  margin-top: 100px;
+}
+
+.footer_right {
+  text-align: right;
+  width: max-content;
+  font-size: 16px;
+}
+
+.footer p, .footer .logo img {
+    font-size: 20px;
+}
+
+@keyframes from_right {
+    0% {
+        opacity: 0;
+        transform: translate(50px, 0px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0) scale(1);
+    }
+}
+
+@keyframes from_left {
+    0% {
+        opacity: 0;
+        transform: translate(-50px, 0px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0) scale(1);
+    }
+}
+
+@media screen and (max-width: 1200px) 
+{
+  .container {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  .header_img {
+    max-width: 500px;
+    right: 0;
+    top: 60px;
+  }
+
+  .about p {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+
+  .about img {
+    margin-top: 120px;
+  }
+
+  .price_card {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 992px) 
+{
+  h1 {
+    font-size: 60px;
+  }
+
+  div, p, input, button, form, span, a, ul, li {
+    font-size: 28px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  .header_top {
+    margin: 0 40px;
+  }
+
+  .header .container {
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .header_img {
+    position: static;
+    max-width: 400px;
+    align-self: center;
+  }
+
+  .about .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about p {
+    margin: 40px 0;
+  }
+
+  .eggs_content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eggs_title_wrapper {
+    text-align: center;
+  }
+
+  .pricing_grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) 
+{
+  h1 {
+    font-size: 45px;
+    text-align: center;
+  }
+
+  div, p, input, button, form, span, a, ul, li {
+    font-size: 22px;
+  }
+
+  nav {
+    align-items: center;
+  }
+
+  .logo img {
+    max-width: 40px;
+  }
+
+  .header_img {
+    display: none;
+  }
+
+  .eggs_image img {
+    display: none;
+  }
+
+  .review_form .container {
+    border: none;
+    padding: 10px;
+  }
+
+  .review_form form {
+    max-width: 90%;
+    gap: 0.5em;
+  }
+
+  input, textarea, select {
+    font-size: 18px;
+  }
+
+  .button, .review_form button {
+    max-width: 100%;
+  }
+
+  .price_card {
+    width: 90%;
+  }
+
+  .footer_right {
+    text-align: center;
+  }
+}
