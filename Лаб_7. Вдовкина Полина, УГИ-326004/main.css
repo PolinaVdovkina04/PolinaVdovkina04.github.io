@@ -1,0 +1,264 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #201b2d;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+}
+
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 900;
+}
+
+p {
+	line-height: 1.65em;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.header {
+	position: relative;
+    background: linear-gradient(to bottom, #64B5F6, #007BFF);
+    color: white;
+    padding: 80px 0;
+    animation: screen_fadeIn 1.3s ease forwards;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header_content {
+    max-width: 50%;
+    opacity: 0;
+    animation: screen_fadeIn 1.5s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes screen_fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+.header .btn {
+    display: inline-block;
+    background-color: #e7c46a;
+    color: black;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2px;
+    margin-top: 10px;
+    transition:all 3s ease;
+}
+
+.btn:hover {
+    transform: translate(150px, 0px) scale(3) rotate(1440deg);
+    background-color: #e67f03;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    width: 60px;
+    height: auto;
+}
+
+.header-image img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+}
+
+.block {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.block_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+	margin-top: 80px;
+}
+
+.blocks {
+    max-width: 250px;
+    text-align: center;
+    opacity: 0;
+}
+
+.blocks img {
+    width: 50px;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.blocks:nth-child(1), .blocks:nth-child(1) img {
+    animation: left_slide 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.blocks:nth-child(2), .blocks:nth-child(2) img {
+    animation: bottom_slide 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.blocks:nth-child(3), .blocks:nth-child(3) img {
+    animation: right_slide 0.8s ease forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes left_slide {
+    0% {
+        opacity: 0;
+        transform: translate(-50px, 0px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0) scale(1);
+    }
+}
+
+@keyframes bottom_slide {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 50px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0) scale(1);
+    }
+}
+
+@keyframes right_slide {
+    0% {
+        opacity: 0;
+        transform: translate(50px, 0px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0) scale(1);
+    }
+}
+
+.contact_form {
+    background-color: #E3F2FD;
+    text-align: center;
+}
+
+.contact_form form {
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_form input, .contact_form button {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.contact_form button {
+    background-color: #e7c46a;
+    transition: all 0.5s ease 0s;
+}
+
+.contact_form button:hover {
+    background-color: #e67f03;
+    cursor: pointer;
+    text-transform: uppercase;
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    background: linear-gradient(to bottom,#1549d0, #6495ed);
+    color: white;
+    text-align: center;
+    padding: 5px auto;
+}
+
+@media screen and (max-width: 1200px) 
+{ 
+    .container{ 
+        max-width: 960px;
+    }
+    .header .btn { padding: 10px 30px; }
+} 
+
+@media screen and (max-width: 992px)  
+{ 
+    .contact_form button{ 
+        background: purple;
+    } 
+    .container{ 
+        max-width: 720px; 
+    }
+    .block_content{ 
+        flex-direction: column;
+    }
+    .header .btn{ 
+        padding: 8px 20px; font-size: 14px;
+    }
+}  
+
+@media screen and (max-width: 768px)  
+{
+    .contact_form button{ 
+        background: blue; 
+    }
+    .container{ 
+        width: 540px; 
+    }
+    .header {
+        padding: 50px 0;
+        text-align: center;
+        flex-direction: column;
+    }
+    .block_content{ 
+        flex-direction: wrap;
+    }
+    .contact_form form{ 
+        width: 90%; 
+    }
+    .header .btn{ 
+        padding: 10px 30px; 
+    }
+}  
+
+@media screen and (max-width: 576px)  
+{
+    .contact_form button{ 
+        background: red; 
+    }
+    .container{ 
+        width: 90%; 
+    } 
+}
